@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les évènements</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        
+        <div id="div">
+            <p id="p">passer sur moi</p>
+            <p>Un deuxième <strong>paragraphe </strong></p>
+        </div>
+    </body>
+    <script>
+        //On accède à notre div et à premier paragraphe
+        //var div = document.getElementById('div');
+        var p1 = document.getElementById('p');
+        
+        //On crée deux gestionnaires d'évènements pour click
+        p1.addEventListener('mouseover',Fonction1);
+        p1.addEventListener('mouseout',Reset1);
+        p1.addEventListener('mousdown',Fonction2);
+        p1.addEventListener('mouseup',Reset2);
+		
+
+        function Fonction1(){
+            this.innerHTML = 'Cliquez moi maintenant !';
+            this.style.backgroundColor = 'orange';
+        };
+		
+		function Reset1(){
+            this.innerHTML = 'Passez sur moi svp';
+            this.style.backgroundColor = '';
+        };
+        
+        function Fonction2(){
+            this.innerHTML = 'Bravo !';
+            this.style.color = '#26C';
+            this.style.fontWeight = 'bold';
+            this.style.fontSize= '24px';
+        };
+        function Reset2(){
+            this.innerHTML = 'Passez sur moi svp';
+            this.style.color = '';
+            this.style.fontWeight = '';
+            this.style.fontSize= '';
+        };
+    </script>
+</html>
+
+
+
+

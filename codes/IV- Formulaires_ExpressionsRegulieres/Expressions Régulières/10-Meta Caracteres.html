@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>On apprend à utiliser les regex en 2015</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            
+            //On cherche tout sauf une nouvelle ligne
+            var r1 = /./g;
+            var res1 = rec.match(r1);
+            
+            //On cherche tout chiffre
+            var r2 = /\d/g;
+            var res2 = rec.match(r2);
+
+            //On cherche tout ce qui n'est pas un chiffre
+            var r3 = /\D/g;
+            var res3 = rec.match(r3);
+            
+            //On cherche un "r" en début ou fin d'un mot
+            var r4 = /\br/;
+            var res4 = r4.test(rec);
+            
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML =  
+                'Tout sauf une nouvelle ligne : ' + res1 +
+                '<br>Tous les chiffres : ' + res2 +
+                '<br>Tout sauf "[0-9]" : ' + res3 +
+                '<br>r en début ou fin de mot ? : ' + res4;
+        </script>
+  </body>
+</html>
+

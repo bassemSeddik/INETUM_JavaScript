@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les tableaux en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les tableaux</h1>
+        <script>
+            var prenoms=['Pierre', 'Victor', 'Julia', 'Claire'], p = '';
+            
+            //On supprime la dernière valeur du tableau
+            var suppr = prenoms.pop();
+            
+            //On affiche les valeurs de notre tableau
+            for(var i = 0; i < prenoms.length; i++){
+                p += 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+            
+            //On affiche les prénoms du tableau et le prénom supprimé
+            alert(p + '\n\nNous avons supprimé ' +suppr+ ' du tableau');
+        </script>
+    </body>
+</html>
+

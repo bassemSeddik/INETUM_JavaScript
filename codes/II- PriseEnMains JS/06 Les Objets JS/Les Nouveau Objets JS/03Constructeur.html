@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les objets</h1>
+        <script>
+            // CODE N°3
+            //On crée un constructeur  "Identite()"
+            function Identite(p, n, a){
+                this.prenom = p;
+                this.nom = n;
+                this.age = a;
+            }
+            
+            //On crée des objets à partir de notre constructeur
+            var sam = new Identite("SAM", "BenFlin", 25);
+            var rima = new Identite("RIMA", "Dubois", 24);
+            
+            //On peut ensuite utiliser les données créées ...
+            alert('Age de SAM : ' + sam.age +
+                  '\nAge de RIMA : ' + rima.age);
+        </script>
+    </body>
+</html>

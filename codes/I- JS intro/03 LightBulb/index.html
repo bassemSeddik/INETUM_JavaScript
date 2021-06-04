@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h2>Que peut faire JavaScript?</h2>
+		<p>JavaScript peut changer le contenu du HTML.</p>
+		<p>Dans ce cas JavaScript change la valeur de l'attribut src (source) d'une image.</p>
+		<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Allumer lumiere</button>
+		<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+		<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Eteindre lumiere</button>
+
+		<p id="demo">JavaScript can hide HTML elements.</p>
+		<br>
+
+        <button type="button" onclick="document.getElementById('demo').style.display='none'">Cacher Texte!</button>
+
+        <button type="button" onclick="document.getElementById('temps').innerHTML = Date()"> Cliquer pour afficher le temps et la date.</button>
+
+		<p id="temps"></p>
+	</body>
+</html>

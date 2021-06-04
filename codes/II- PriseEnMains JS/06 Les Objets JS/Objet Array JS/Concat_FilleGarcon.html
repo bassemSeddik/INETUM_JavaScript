@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les tableaux en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les tableaux</h1>
+        <script>
+            //On crée deux tableaux
+            var garcons = ['Pierre', 'Victor', 'Florian'];
+            var filles = ['Julia', 'Claire'];
+            
+            /*On fusionne les deux tableaux ci-dessus avec
+             *concat() pour en créer un troisième, nouveau*/
+            var gf =  garcons.concat(filles);
+            
+            //On aurait pu également bien sûr faire ceci :
+            var fg = filles.concat(garcons);
+            
+            //On affiche les différents tableaux
+            alert('Valeurs du tableau garçons : ' + garcons +
+                  '\nValeurs du tableau filles : ' + filles +
+                  '\n\nValeurs du tableau gf : ' + gf +
+                  '\n\nValeurs du tableau fg : ' + fg);
+        </script>
+    </body>
+</html>
+

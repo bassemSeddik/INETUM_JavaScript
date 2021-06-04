@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Le DOM</h1>
+        
+        <div>
+            <p class="para">Du texte</p>
+            <p class="para">Un deuxième <strong>paragraphe</strong></p>
+        </div>
+        
+        <script>
+            //On accède à h1
+            var titre = document.getElementById('gros_titre');
+            
+            /*On accède d'abord à l'espace entre notre h1 et notre div,
+             *puis à notre div avec le deuxième nextSibling*/
+            var div = titre.nextSibling.nextSibling;
+            
+            //On modifie le contenu textuel du div
+            div.innerHTML = '<p>div totalement modifié !</p>'
+        </script>
+    </body>
+</html>

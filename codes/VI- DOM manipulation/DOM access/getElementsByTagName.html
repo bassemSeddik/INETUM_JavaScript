@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Le DOM</h1>
+        <p>Du texte et <a href="https://github.com/bassemSeddik/formationDHL">un lien</a></p>
+        <p>Un deuxième paragraphe</p>
+        
+        <script>
+            var tableau = document.getElementsByTagName('p');
+            alert('Notre page contient ' + tableau.length + ' paragraphes');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Le DOM</h1>
+        <p class="para">Du texte</p>
+        <p class="para">Un deuxième paragraphe</p>
+        
+        <script>
+            //On accède à notre élément h1 en JavaScript
+            var titre = document.getElementById('gros_titre');
+
+            //On accède ensuite à l'élément parent de h1 (body)
+            var parent = document.body;
+            
+            //On crée une valeur de remplacement
+            var  nouveauTitre = document.createElement('h2');
+            
+            //On ajoute du texte et un id à notre h2
+            nouveauTitre.id = 'titre_moyen';
+            nouveauTitre.innerHTML = 'Titre modifié en Js !'
+            
+            //On remplace finalement h1 par h2
+            parent.replaceChild(nouveauTitre, titre);
+        </script>
+    </body>
+</html>
+
+

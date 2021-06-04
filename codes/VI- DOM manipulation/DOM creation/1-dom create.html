@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Le DOM</h1>
+        <p class="para">Du texte et <a href="https://github.com/bassemSeddik/formationDHL">un lien</a></p>
+        <p class="para">Un deuxième paragraphe</p>
+        
+        <script>
+            document.getElementById('gros_titre').innerHTML = 'Titre modifié !';
+			var newPara = document.createElement('p');
+            newPara.id = 'nouveau';
+            var texte = document.createTextNode('Inséré !');
+            newPara.appendChild(texte);
+			
+            document.body.appendChild(newPara);
+			document.querySelector('a').style.color = 'black'; 
+			document.querySelector('a').style.fontSize = '60px'; 
+        </script>
+    </body>
+</html>

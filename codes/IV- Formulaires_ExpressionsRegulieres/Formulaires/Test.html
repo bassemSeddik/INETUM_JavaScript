@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les formulaires</title>
+        <meta charset="utf-8">   
+        <style>label{display: inline-block;min-width: 200px;}</style>
+    </head>
+    
+    <body>
+        <h1>Les formulaires HTML</h1>
+        <form method="post" action="traitement.php">
+            <label for='prenom'>Donnez votre prénom : </label>
+            <input type='text' name='prenom' id='prenom' maxlength='20' required>
+            <span id='missPrenom'></span><br>
+            
+            <label for='email'>Donnez votre email : </label>
+            <input type='email' name='email' id='email' required>
+			<span id='missEmail'></span><br>
+            
+			<label for='age'>Donnez votre age : </label>
+            <input type='number' name='age' id='age' required>
+			<span id='missAge'></span><br>  
+            
+			<input type='submit' value='Valider' id='bouton_envoi'>
+        </form>
+        
+        <script>
+			var prenom = document.getElementById('prenom');
+			var email = document.getElementById('email');
+			var age = document.getElementById('age');
+			
+            var missPrenom = document.getElementById('missPrenom');
+			var missEmail = document.getElementById('missEmail');
+            var missAge = document.getElementById('missAge');
+			
+            //var prenomExpReg = ... // TODO ;
+			//var emailExpReg = ... // TODO ;
+			//var ageExpReg = ... // TODO ;
+            
+			var formValid = document.getElementById('bouton_envoi');
+            formValid.addEventListener('click', validation);
+            
+            function validation(event){
+                //Si le champ prenom est vide
+                if (prenom.value.length == 0){
+                    event.preventDefault();
+                    missPrenom.textContent = 'Prénom manquant';
+                    missPrenom.style.color = 'red';
+                //Si le format du prenom est incorrect
+                }else if (prenomExpReg.test(prenom.value) == false){
+                    event.preventDefault();
+                    missPrenom.textContent = 'Format incorrect';
+                    missPrenom.style.color = 'blue';
+                }else{ 
+					missPrenom.textContent = ' ';
+                }
+				
+				//Si le champ age est vide
+                if (age.value.length == 0){
+                    event.preventDefault();
+                    missAge.textContent = 'Age manquant';
+                    missAge.style.color = 'red';
+                //Si le format du prenom est incorrect
+                }else if (ageExpReg.test(age.value) == false){
+                    event.preventDefault();
+                    missAge.textContent = 'Format incorrect';
+                    missAge.style.color = 'blue';
+                }else{ 
+					missAge.textContent = ' ';
+                }
+				
+				//Si le champ email est vide
+                if (email.value.length == 0){
+                    event.preventDefault();
+                    missEmail.textContent = 'Email manquant';
+                    missEmail.style.color = 'red';
+                //Si le format du prenom est incorrect
+                }else if (emailExpReg.test(email.value) == false){
+                    event.preventDefault();
+                    missEmail.textContent = 'Format incorrect';
+                    missEmail.style.color = 'blue';
+                }else{ 
+					missEmail.textContent = ' ';
+                }
+            }
+        </script>
+    </body>
+</html>

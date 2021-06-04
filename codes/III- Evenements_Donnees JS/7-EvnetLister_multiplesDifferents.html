@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les évènements</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        
+        <p>Passez sur moi svp</p>
+        <p>Un deuxième <strong>paragraphe</strong></p>
+    </body>
+    <script>
+        //On accède à notre premier paragraphe
+        var p1 = document.querySelector('p');
+        
+        //On accroche deux gestionnaires d'évènements à p1
+        p1.addEventListener('envent.touchmove',Fonction1);
+        p1.addEventListener('mousedown',Fonction2);
+        
+        //Création des fonctions
+        function Fonction1(){
+            this.innerHTML = 'Cliquez moi maintenant !';
+            this.style.backgroundColor = 'orange';
+        };
+        
+        function Fonction2(){
+            this.innerHTML = 'Bravo !';
+            this.style.color = '#26C';
+            this.style.fontWeight = 'bold';
+            this.style.fontSize= '24px';
+        };
+    </script>
+</html>
+
+
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>Engagez-vous qu'ils disaient, rengagez-vous qu'ils disaient !</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            
+            var r1 = /aient/ig;
+
+            //On fait notre recherche avec exec()
+            var res1 = r1.exec(rec);
+            
+            //On affiche le résultat dans notre deuxième paragraphe
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 'Résultat : ' + res1;
+        </script>
+    </body>
+</html>

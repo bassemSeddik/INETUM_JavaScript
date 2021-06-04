@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>On apprend à utiliser les regex en JavaScript en 2015</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            
+            //On cherche toutes les majuscules entre C et X
+            var r1 = /[C-X]/g;
+            var res1 = rec.match(r1);
+            
+            //On cherche n'importe quel caractère sauf a, e, i, o, u
+            var r2 = /[^aeiou]/g;
+            var res2 = rec.match(r2);
+            
+            //On cherche tous les chiffres entre 0 et 9
+            var r3 = /[0-9]/g;
+            var res3 = rec.match(r3);
+            
+            /*On cherche si on a bien une majuscule en début de chaîne.
+             *Attention : le "^" est bien en dehors de notre classe*/
+            var r4 = /^[A-Z]/;
+            var res4 = r4.test(rec);
+            
+            //On cherche toute succession de quatre chiffres
+            var r5 = /[0-9]{4}/;
+            var res5 = rec.match(r5);
+            
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML =  
+                'Majuscules entre C et X : ' + res1 +
+                '<br>Tout sauf voyelles minuscules : ' + res2 +
+                '<br>Tous les chiffres : ' + res3 +
+                '<br>Majuscule en début de chaîne ? : ' + res4 +
+                '<br>Succession de 4 chiffres : ' + res5;
+        </script>
+    </body>
+</html>

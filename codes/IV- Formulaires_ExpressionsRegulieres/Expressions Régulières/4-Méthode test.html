@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>Engagez-vous qu'ils disaient, rengagez-vous qu'ils disaient !</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            
+            //Première regex
+            var r1 = /ENGAGEZ/;
+            
+            //Deuxième regex, avec l'option i (case insensitive)
+            var r2 = /ENGAGEZ/i;
+            
+            //On fait nos recherches avec test()
+            var res1 = r1.test(rec);
+            var res2 = r2.test(rec);
+            
+            //On affiche les résultats
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML =
+                'Résultat 1 : ' + res1 +
+                '<br>Résultat 2 : ' + res2;
+        </script>
+    </body>
+</html>
+

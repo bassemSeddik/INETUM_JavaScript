@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE encyclopedie SYSTEM "encyclopedie.dtd">
+<encyclopedie>
+	<personne datenaissance="1942-01-08" genre="H">
+		<nom>Nom1</nom>
+		<prenom>Prenom1</prenom>
+		<publication>Une breve histoire du temps</publication>
+	</personne>
+	<personne datenaissance="1932-07-13" genre="H">
+		<nom>Nom2</nom>
+		<prenom>Prenom2</prenom>
+		<publication>L'Univers explique a mes petits-enfants</publication>
+		<publication>Poussieres d'etoiles</publication>
+	</personne>
+	<personne datenaissance="1879-03-14" genre="F">
+		<nom> Nom3</nom>
+		<prenom>Prenom3</prenom>
+		<publication>Des ondes gravitationnelles</publication>
+		<publication>Sur la theorie quantique du rayonnement</publication>
+	</personne>
+</encyclopedie>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Le DOM</h1>
+        <p class="para">Du texte et <a href="https://github.com/bassemSeddik/formationDHL">un lien</a></p>
+        <p class="para">Un deuxième paragraphe</p>
+        
+        <script>
+            /*On peut procéder en deux temps, en récupérant d'abord les informations
+             *liées à un élément en particulier dans une variable, puis appliquer
+             *innerHTML à cette variable par la suite*/
+            var titre = document.getElementById('gros_titre');
+            var texteTitre = titre.innerHTML;
+            
+            /*Ou on peut accéder au texte d'un élément en un coup, sans utiliser de
+             *variable*/
+            var textePara = document.querySelector('.para').textContent;
+            
+            alert('Titre : ' + texteTitre +
+                  '\nParagraphe 1 : ' + textePara);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Les tableaux en JavaScript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Les tableaux</h1>
+    <script>
+        //On crée un objet littéral
+        var prenoms = {
+            prenom1: 10,
+            prenom2: 'Victor',
+            prenom3: 'Julia',
+            prenom4: 'Claire'
+        };
+
+        var p = '';
+
+        prenoms.prenom1 = 'test';
+
+        for (var notreRerence in prenoms) {
+            p += notreRerence + ' : ' + prenoms[notreRerence] + '\n';
+        }
+        //On affiche tout le contenu de notre objet
+        alert(p);
+        
+    </script>
+</body>
+
+</html>

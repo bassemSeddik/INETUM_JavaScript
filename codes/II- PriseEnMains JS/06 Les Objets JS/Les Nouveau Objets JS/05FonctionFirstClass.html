@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les objets</h1>
+        <script>
+			// CODE N°5
+			function Voiture (id){
+				this.idVoiture = id;
+				
+				this.demarrer = function(){
+					console.log('Démarrage de ' + this.idVoiture);
+				}
+			}
+			let maVoiture = new Voiture(133);
+			maVoiture.demarrer();
+			
+			// Rajout d'une nouvelle méthode à l'instance générale (le prototype JS)
+			Voiture.prototype.arret = function(){
+				console.log ("ARRET de " + this.idVoiture + "!");
+			}
+
+			maVoiture.arret();
+		</script>
+    </body>
+</html>

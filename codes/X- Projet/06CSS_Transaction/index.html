@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- Appel aux styles -->
+    <script src="https://kit.fontawesome.com/af7aa32ceb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/form.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    
+    <title>Suivi des dépenses</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulaire de transaction</h1>
+      <form id="formulaire">
+        <div class="form-control">
+          <label for="nomTransaction">Nom</label>
+          <div class="inputGroup">
+            <i id="nomTransactionIcone"></i>
+            <input type="text" id="nomTransaction" placeholder="tapez le nom..." />
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="valeurTransaction">Montant (- dépenses, + revenus)</label>
+          <div class="inputGroup">
+            <i id="valeurTransactionIcone"></i>
+            <input type="number" id="valeurTransaction" placeholder="tapez le montant..." />
+          </div>
+        </div>
+        <button class="btn" type="submit">Ajouter</button>
+      </form>
+    </div>
+
+    <!-- scripts -->
+    <script src="./models/transaction.js"></script>
+    <script src="dynamicStyle2.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

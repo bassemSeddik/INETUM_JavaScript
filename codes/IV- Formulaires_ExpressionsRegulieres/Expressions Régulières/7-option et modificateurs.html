@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>On apprend à utiliser les regex en JavaScript</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            var rec2 = 'Je suis sur \ndeux lignes en Js'
+            
+            //On cherche "on", "On", "oN" ou "ON"
+            var r1 = /on/i;
+            var res1 = rec.match(r1);
+            
+            //On cherche tous les 'e'
+            var r2 = /e/g;
+            var res2 = rec.match(r2);
+            
+            //On cherche si une ligne commence par "d" (sans m) dans rec2
+            var r3 = /^d/;
+            var res3 = r3.test(rec2);
+            
+            //On cherche si une ligne commence par "d" (avec m) dans rec2
+            var r4 = /^d/m;
+            var res4 = r4.test(rec2);
+            
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML =  
+                'Résultat regex 1 : ' + res1 +
+                '<br>Résultat regex 2 : ' + res2 +
+                '<br>Résultat regex 3 : ' + res3 +
+                '<br>Résultat regex 4 : ' + res4;
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Le DOM</h1>
+        <p class="para">Du texte</p>
+        <p class="para">Un deuxième paragraphe</p>
+        
+        <script>
+            /*On veut supprimer notre titre, on commence donc
+             *par y accéder*/
+            var titre = document.getElementById('gros_titre');
+            
+            //On accède ensuite à l'élément parent de h1 (body)
+            var parent = document.body;
+            
+            //On supprime finalement notre titre avec removeChild
+            parent.removeChild(titre);
+        </script>
+    </body>
+</html>
+

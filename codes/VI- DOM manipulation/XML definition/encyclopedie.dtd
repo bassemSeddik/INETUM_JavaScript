@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!ELEMENT encyclopedie (personne*)>
+<!ELEMENT personne (nom,prenom,publication+)>
+<!ATTLIST personne genre (H | F) "H">
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT publication (#PCDATA)>

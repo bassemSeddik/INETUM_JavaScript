@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>On apprend à utiliser les regex en JavaScript</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            
+            //On veut savoir si notre paragraphe contient un "x"
+            var r1 = /x+/;
+            var res1 = r1.test(rec);
+            
+            /*On cherche "e" ou "end" (on utilise les parenthèses)
+             *pour faire porter "?" sur "nd"*/
+            var r2 = /e(nd)?/g;
+            var res2 = rec.match(r2);
+            
+            //Notre paragraphe commence par "o" et finit par "e" ?
+            var r3 = /^oe$/i;
+            var res3 = r3.test(rec);
+            
+            //Notre paragraphe contient-il "pp"
+            var r4 = /p{2}/;
+            var res4 = r4.test(rec);
+            
+            //Y a t-il l'expression "Java" suivie de "script" ?
+            var r5 = /Java(?=Script)/;
+            var res5 = r5.test(rec);
+            
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 
+                'Présence d\'un "x" : ' + res1 +
+                '<br>Occurences de "e" ou "end" : ' + res2 +
+                '<br>Commence par "o", finit par "e" ? ' + res3 +
+                '<br>Contient deux "p" à la suite ? : ' + res4 +
+                '<br>Présence de "Java" suivi de "Script" ? :' + res5;
+        </script>
+    </body>
+</html>

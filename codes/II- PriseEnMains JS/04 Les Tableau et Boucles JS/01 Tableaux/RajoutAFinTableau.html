@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les tableaux en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les tableaux</h1>
+        <script>
+            //Observez bien la syntaxe des tableaux
+            var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'];
+
+            //prenoms.length = 4
+            prenoms[prenoms.length] = 'Florian';
+
+            //prenoms.length = 5 (le code est lu linéairement)
+            prenoms[prenoms.length] = 'Chloé';
+
+            //On affiche les valeurs ajoutées à notre tableau
+            alert('On a ajouté ' +prenoms[4]+ ' et ' +prenoms[5]+
+                ' à notre tableau !');
+        </script>
+    </body>
+</html>
+

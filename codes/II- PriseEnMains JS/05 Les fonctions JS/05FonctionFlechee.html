@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les fonctions en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les fonctions</h1>
+        <script>
+            // On va utiliser une fonction! Oui le signe () le confirme
+            // pas la peine de lui donner un nom!
+            // Son code? le voici, juste après la flèche
+            let GetNombre = () => {return Math.random()};
+            alert("Notre message est: " + GetNombre());
+
+            let GetRandomMessage = (prefixe, suffixe) => {
+                let number = Math.random();
+                return prefixe + number + suffixe;
+            }
+            alert("Notre nouveau message est: " + GetRandomMessage("<< ", " >>"));
+			
+        </script>
+    </body>
+</html>

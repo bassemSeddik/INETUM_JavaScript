@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+		<h1 id="gros_titre">Le DOM</h1>
+		
+        <div>
+            <p class="para">Du texte</p>
+            <p class="para">Un deuxième paragraphe</p>
+        </div>
+        
+        <script>
+            //On accède à notre body
+            var b = document.body;
+            
+            /*On accède ensuite à notre div avec childNodes.
+             *On se rappelle que le premier élément d'un tableau
+             *possède la clef 0, le second la clef 1, etc.*/
+            var div = b.childNodes[3];
+			alert(div);
+            
+            //On accède ensuite au premier paragraphe dans notre div
+            var p1 = div.childNodes[1];
+            
+            //Et enfin au texte dans notre paragraphe, qu'on affiche
+           var texte = p1.childNodes[0].nodeValue;
+            alert(texte);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>from To JSON</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+</head>
+
+<body>
+    <script>
+        // 1- Create a JavaScript object with the table array in it
+        var obj = {
+            table: []
+        };
+        // 2- Add some data to it, for example:
+        obj.table.push({ id: 1, square: 2 });
+
+        // 3- Convert it from an object to a string with JSON.stringify
+        var json = JSON.stringify(obj);
+
+        let formation = [
+            {
+                "nom": "Bassem Seddik",
+                "nombreFormes": 10,
+                "centre": "M2i",
+                "qualité": 9.5
+            },
+            {
+                "nom": "Autre formateur",
+                "nombreFormes": 13,
+                "centre": null,
+                "qualité": 9
+            }
+        ];
+        console.log(JSON.parse(formation)[0]);
+        console.log(JSON.parse(formation)[1]["nom"]);
+        console.log(JSON.parse(formation)[0]["nom"][0]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<body>
+    <a id="myLink" href="http://www.un_lien_quelconque.com">Un lien modifié dynamiquement</a>
+
+    <script>
+        var link = document.getElementById('myLink');
+        var href = link.getAttribute('href'); // On récupère l'attribut « href »
+	
+        alert(href);
+
+        //link.setAttribute('href', 'https://github.com/bassemSeddik/formationDHL'); // On édite l'attribut « href »
+		link.href = 'https://github.com/bassemSeddik/formationDHL';
+    </script>
+</body>

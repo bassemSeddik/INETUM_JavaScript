@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Le DOM</h1>
+        
+        <div>
+            <p class="para">Du texte</p>
+            <p class="para">Un deuxième <strong>paragraphe</strong></p>
+        </div>
+        
+        <script>
+            //On accède à notre deuxième paragraphe
+            var p2 = document.querySelectorAll('.para')[1];
+            
+            //On accède aux premier et dernier enfants de p2
+            var premier = p2.firstChild;
+            var dernier = p2.lastChild;
+            
+            //On récupère et affiche ce qu'ils contiennent
+            var inner1 = premier.nodeValue;
+            var inner2 = dernier.innerHTML;
+            
+            alert('Contenu premier enfant : ' + inner1 +
+                  '\nContenu dernier enfant : ' + inner2);
+        </script>
+    </body>
+</html>
+

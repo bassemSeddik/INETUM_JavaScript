@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les évènements</title>
+        <meta charset="utf-8">
+        <style>
+            div{
+                border: 1px solid orange;
+                background-color: #29B;
+                padding: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        <div id="div1">
+            <p id="p1">Un exemple de <strong>texte fort</strong></p>
+        </div>
+        
+        <script>
+            //On accède à body, div1, p1 et à strong
+            var body = document.body;
+            var div1 = document.getElementById('div1');
+            var p1 = document.getElementById('p1');
+            var strong = document.querySelector('strong');
+        
+            //Phase de capture utilisée pour strong et p1
+            p1.addEventListener('click',CP1,true);
+            strong.addEventListener('click',CS,false);
+            function CP1(){alert('Capture paragraphe');};
+            function CS(){alert('Capture strong');};
+        
+            //Phase de bouilllonnement utilisée pour div1 et body
+            div1.addEventListener('click',BD1, false);
+            body.addEventListener('click',BB, true);
+            function BD1(){alert('Bouillonnement div');};
+            function BB(){alert('Bouillonnement body');};
+        </script>
+    </body>
+</html>
+

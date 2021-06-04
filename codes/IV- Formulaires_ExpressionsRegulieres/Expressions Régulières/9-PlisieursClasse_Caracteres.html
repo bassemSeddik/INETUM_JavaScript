@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>On apprend à utiliser les [regex] en JavaScript en 2015</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            
+            //On cherche tout entre a et z plus "à", "é" et "è"
+            var r1 = /[a-zàéè]/g;
+            var res1 = rec.match(r1);
+            
+            //On cherche tout entre a et z, A et Z et 0 et 9
+            var r2 = /[a-zA-Z0-9]/g;
+            var res2 = rec.match(r2);
+            
+            /*On cherche tout ce qui n'est pas dans a-z ni A-Z
+             *Les espaces vont donc être comptés*/
+            var r3 = /[^a-zA-Z]/g;
+            var res3 = rec.match(r3);
+            
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML =  
+                'Lettre min plus "à", "é" et "è" : ' + res1 +
+                '<br>Lettre min, maj et chiffre : ' + res2 +
+                '<br>Tout sauf a-z et A-Z : ' + res3;
+        </script>
+    </body>
+</html>

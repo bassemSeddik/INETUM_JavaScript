@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les évènements</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        
+        <div id="div">
+            <p id="p">Un premier paragraphe</p>
+            <p>Un deuxième paragraphe</p>
+        </div>
+    </body>
+    <script>
+        //On accède à notre div et à premier paragraphe
+        var div = document.getElementById('div');
+        var p1 = document.getElementById('p');
+        
+        //On crée deux gestionnaires d'évènements pour click
+        div.addEventListener('click',MessageDiv);
+        p1.addEventListener('click',MessageP);
+        
+        function MessageDiv(){
+            alert('Evènement du div');
+        };
+        
+        function MessageP(){
+            alert('Evènement du paragraphe');
+        };
+    </script>
+</html>
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les évènements</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        
+        <p>Cliquez-moi, cliquez-moi !</p>
+        <p>Un deuxième <strong>paragraphe</strong></p>
+    </body>
+    <script>
+        //On accède à notre premier paragraphe
+        var p1 = document.querySelector('p');
+        
+        //On accroche deux gestionnaires d'évènements à p1
+        p1.addEventListener('click',Message1);
+        p1.addEventListener('click',Message2);
+        
+        //Création des fonctions
+        function Message1(){
+            alert('Première boîte !');
+        };
+        
+        function Message2(){
+            alert('Deuxième boîte !');
+        };
+    </script>
+</html>
+
+
+
+

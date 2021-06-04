@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les objets</h1>
+        <script>
+            // CODE N°4
+            //On crée un constructeur  de Etudiant
+            function Etudiant(p, n, a){
+                this.prenom = p;
+                this.nom = n;
+                this.age = a;
+            }
+            
+            //On crée un premier objet
+            var etudiant1 = new Etudiant("SAM", "BenSalem", 25);
+            var etudiant2 = new Etudiant("RIMA", "Dubois", 20);
+
+            //On crée ensuite SAM que l'on donne "égal" à RIMA
+            etudiant1 = etudiant2;
+            
+            /*Si on modifie la valeur du prénom de SAM, RIMA
+             *sera également impacté car victor et pierre représentent
+             *le même objet*/
+            etudiant1.prenom = "blablabla";
+            
+            //On peut s'en convaincre en affichant le résultat
+            alert('Prénom de SAM : ' + etudiant1.prenom +
+                  '\nPrénom de RIMA : ' + etudiant2.prenom);
+        </script>
+    </body>
+</html>
+
+

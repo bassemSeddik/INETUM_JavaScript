@@ -1,0 +1,15 @@
+h1{
+  font-family: serif;
+  letter-spacing: 5px;
+  text-transform: capitalize;
+  text-align: start;
+  border: 2px solid rgb(164 185 40 / 60%);
+  background: rgb(96 121 255);
+  color: rgb(0 0 0 / 60%);
+  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border-radius: 2px;
+  padding: 3px 10px;
+  display: inline-block;
+  cursor: pointer;
+  
+}

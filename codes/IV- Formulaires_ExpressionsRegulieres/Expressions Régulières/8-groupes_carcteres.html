@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>On apprend à utiliser les regex en JavaScript</p>
+        <p id="reg"></p>
+        
+        <script>
+            //On accède au texte de notre paragraphe
+            var rec = document.querySelector('p').textContent;
+            
+            //On cherche "aeiouy"
+            var r1 = /aeiouy/g;
+            var res1 = rec.match(r1);
+            
+            //On cherche tous les 'a', 'e', 'i', 'o', 'u' et 'y'
+            var r2 = /[aeiouy]/g;
+            var res2 = rec.match(r2);
+            
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML =  
+                'Recherche sans classe : ' + res1 +
+                '<br>Recherche avec classe : ' + res2;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<! Doctype html>
+<html>  
+	<head>  
+		<title>Ma belle page</title>  
+		<meta charset=utf-8">  
+		<script>
+// Ceci est un commentaire sur une ligne
+var x = 5, y=10, z=-2;
+x=x+1; 
+x+=1; 
+x=x-2; 
+x-=z;
+y=y*2; 
+y*=2; 
+var multi = x*y; 
+var divi = y/3; 
+var mod = 13%3;
+z = x+y/(4+z)%3;
+
+alert ("mult: " + multi + " - div: " + divi + " - mod: " + mod);
+alert ("z est " + z);
+
+x = 1 - 2 - 3; //Calcule (1 - 2) - 3 = _& - 3 = - 4
+y = 1 - (2 - 3); //Calcule 1 - (2 - 3) = 1 - (- 1) = 1 + 1 = 2
+z = 2 ** 3 ** 2; //Calcule 3 ** 2 = 3 * 3 = 9 puis 2 ** 9 = 512
+
+alert('x contient : ' + x +
+      '\ny contient : ' + y +
+      '\nz contient : ' + z);
+
+		</script>	
+	</head>  
+	<body>  
+		<h1>Bienvenue à JavaScript</h1>  
+	</body>  
+</html>  

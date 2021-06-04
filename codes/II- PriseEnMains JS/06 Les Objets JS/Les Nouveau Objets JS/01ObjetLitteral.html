@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les objets</h1>
+        <script>
+            // CODE N°1
+			//On crée un objet litéral
+            // Ici les valeurs sont fixes, c'est une sorte de constante
+            var moi = {
+                prenom : "Bassem",
+                nom : "Seddik",
+                age : 38,
+                //this sert de référence à l'objet utilisé
+                id : function(){
+                    return this.prenom + ' ' + this.nom;
+                }
+            };  
+            //On affiche le résultat retourné par notre méthode
+            alert (typeof(moi)); alert(moi.id());
+            console.log(JSON.stringify(moi));
+        </script>
+    </body>
+</html>

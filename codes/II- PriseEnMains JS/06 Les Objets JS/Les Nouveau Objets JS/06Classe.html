@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les objets</h1>
+        <script>
+			// CODE N°6
+			class Voiture{
+				constructor(id){
+					this.idVoiture = id;
+				}
+
+				getInfo(){
+					return `ID voiture: ${this.idVoiture}`;
+				}
+			}
+
+			class VoitureDeSport extends Voiture{
+				constructor(id, max){
+					super(id);
+					this.maxVitesse = max;
+				}
+				getVitesseMax(){
+					return this.maxVitesse;
+				}
+			}
+
+			let maVoiture1 = new Voiture();
+			let maVoiture2 = new Voiture(133);
+			let maVoiture3 = new Voiture(209);
+
+			let maSuperVoiture1 = new VoitureDeSport();
+			let maSuperVoiture2 = new VoitureDeSport(588);
+			let maSuperVoiture3 = new VoitureDeSport(2009, 300);
+
+			document.write(maSuperVoiture2.constructor.name);
+			// console.log(JSON.stringify(maVoiture2));
+			// console.log(maVoiture3.getInfo());
+
+			// console.log(JSON.stringify(maSuperVoiture2));
+			// console.log(maSuperVoiture3.getInfo());
+			// console.log(maSuperVoiture3.getVitesseMax());
+        </script>
+    </body>
+</html>

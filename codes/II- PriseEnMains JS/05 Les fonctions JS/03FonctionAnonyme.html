@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les fonctions en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Les fonctions</h1>
+        <script>			
+			// fonction anonyme référencée par une varible 
+			// La variable est une sorte de pointeur à une fonction
+			let monAlerte = function ( var1 ){
+				alert('Alerte exécutée par une fonction anonyme 1 | ' + var1);
+			};
+			monAlerte('Texte en paramètre');
+			
+			//closure autoinvoquée (closure)
+			(function(){
+				alert('Alerte exécutée par une fonction anonyme 2');
+			})();
+			
+        </script>
+    </body>
+</html>

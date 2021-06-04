@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les évènements</title>
+        <meta charset="utf-8">
+        <style>
+            div{
+                border: 1px solid orange;
+                background-color: #29B;
+                padding: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        <div id="div1">
+            <p id="p1">Qui est le déclencheur ? Le porteur ?</p>
+        </div>
+        
+        <script>
+            //On accède à div1 et p1
+            var div1 = document.getElementById('div1');
+            var p1 = document.getElementById('p1');
+        
+            //On demande à div1 de réagir en cas de clic
+            div1.addEventListener('click', Message);
+            
+            //On utilise target et currentTarget durant l'évènement
+            function Message(event){
+                this.innerHTML = 'Element déclencheur : ' + event.target +
+                '<br/>Element portant l\'évènement : ' + event.currentTarget;
+            }
+        </script>
+    </body>
+</html>
+

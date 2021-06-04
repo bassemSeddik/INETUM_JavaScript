@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les formulaires</title>
+        <meta charset="utf-8">
+            
+        <style>
+            label{
+                display: inline-block;
+                min-width: 200px;
+            }
+            input[type='submit']{
+                text-align: right;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Les formulaires HTML</h1>
+        
+        <!--Nous ne créerons pas la page "traitement.php" dans ce cours.
+        Cette page doit normalement effectuer le traitement des données.
+        Le bouton "valider" ne fonctionnera donc pas ici.-->
+        <form metod="post" action="traitement.php">
+            <label for='prenom'>Entrez votre prénom svp : </label>
+            <input type='text' name='prenom' id='prenom' maxlength='20' required><br>
+            
+            <label for='mail'>Entrez votre mail : </label>
+            <input type='email' name='mail' id='mail' required><br>
+            
+            <label for='tel'>Numéro de téléphone :</label>
+            <input type='tel' name='tel' id='tel' required pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"><br>
+            
+			<label for='the_search'>Recherche :</label>
+			<input type="search" placeholder="Recherche" name="the_search" required><br>
+			
+			<label for='anniversaire'>Date :</label>
+			<input type="date" name="anniversaire" required><br>
+			
+			<label for='holidays'>Mois :</label>
+			<input type="month" name="holidays" required><br>
+			
+			<label for='howmuch'>Nombre :</label>			
+			<input type="number" name="howmuch" required><br>
+			
+			<label for='Slider'>Slider :</label>						
+			<input type="range" name="Slider" required><br>
+
+			<label for='textcolor'>Couleur :</label>									
+			<input type="color" value="#fad345" name="textcolor" required><br>
+
+            <input type='submit' value='Valider'>
+        </form>
+    </body>
+</html>
+
+

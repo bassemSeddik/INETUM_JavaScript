@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions régulières</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>Expressions régulières et JavaScript</h1>
+        <p>Engagez-vous qu'ils disaient, rengagez-vous qu'ils disaient !</p>
+        <p id="reg"></p>
+        
+        <script>
+            /*On accède à notre paragraphe dans lequel on souhaite
+             *faire notre recherche*/
+            var expr = document.querySelector('p');
+            
+            //Première regex, avec l'option i
+            var r1 = /engagez/i;
+            
+            //Deuxième regex, sans option
+            var r2 = /engagez/;
+            
+            //On fait nos recherches avec search()
+            var res1 = expr.textContent.search(r1);
+            var res2 = expr.textContent.search(r2);
+            
+            //On affiche les résultats
+            var resultat = document.getElementById('reg');
+            
+            alert(
+
+                'Résultat search() sur regex 1 : ' + res1 +
+                '<br>Résultat search() sur regex 2 : ' + res2
+            
+                );
+
+        </script>
+    </body>
+</html>
+
+
