@@ -1,11 +1,26 @@
 <HTML>
 	<HEAD>
 	<TITLE>New Document</TITLE>
-		<script language="Javascript">
-		</script>
+		
 	</HEAD>
 	<BODY>
 		<form name="form1">
+			
 		</form>
+
+		<button id="monBouton">
+			cliquer ici pour incrementer	
+		</button>
+		
+		<script language="Javascript">
+			let myButton = document.getElementById('monBouton');
+        	myButton.addEventListener('click', incrementer);
+			
+			let incremtalValue = 0;
+        	function incrementer(){
+            	this.innerHTML = incremtalValue++;
+        	}
+		</script>
+
 	</BODY>
 </HTML>

@@ -27,7 +27,7 @@ function createTransaction(name, amount) {
 var transactions = [];
 
 function addTransaction(event) {
-	var transaction = createTransaction("fclxdmf", 3555);
+	var transaction = createTransaction(generateTaskName() , generateAmount());
 	transactions.push(transaction);
 	console.log(transactions);
 }
@@ -36,6 +36,7 @@ const addTransactionBtn = document.getElementById("addTransactionBtn");
 addTransactionBtn.addEventListener("click", addTransaction);
 
 function destroyEventListner(event) {
+	// nous avons une callback function par ici
 	addTransactionBtn.removeEventListener("click", addTransaction);
 }
 

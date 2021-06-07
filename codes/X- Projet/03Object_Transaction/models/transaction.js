@@ -12,6 +12,6 @@ function Transaction(name, amount)
 	};
 	
 	this.getInfo = function () {
-		return "Transaction" + this.name + " de montant " + this.amount;
+		return "Transaction: " + this.name + " de montant " + this.amount;
 	};
 }

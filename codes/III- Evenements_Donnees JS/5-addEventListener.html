@@ -15,14 +15,16 @@
         //On accède à notre premier paragraphe
         var p1 = document.querySelector('p');
         
+        function changeTexte(){
+            this.innerHTML = '<strong>Bravo !</strong>';
+            this.style.color = 'orange';
+        };
+        
         //On accroche un gestionnaire d'évènements à p1
         p1.addEventListener('click',changeTexte);
         
         /*On construit notre fonction changeTexte qui ne sera
          *exécutée que lors du déclenchement de l'évènement*/
-        function changeTexte(){
-            this.innerHTML = '<strong>Bravo !</strong>';
-            this.style.color = 'orange';
-        };
+        
     </script>
 </html>

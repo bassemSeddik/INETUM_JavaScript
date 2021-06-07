@@ -31,16 +31,16 @@
             var p2 = document.getElementById('p2');
         
             //Phase de bouillonnement utilisée pour div1 et p1
-            div1.addEventListener('click',MessageDiv1, false);
+            div1.addEventListener('click',MessageDiv1);
             p1.addEventListener('click',MessageP1, false);
-            function MessageDiv1(){alert('Evènement du div');};
-            function MessageP1(){alert('Evènement du paragraphe');};
+            function MessageDiv1(){alert('Evènement du div 1');};
+            function MessageP1(){alert('Evènement du paragraphe 1');};
         
             //Phase de capture utilisée pour div2 et p2
             div2.addEventListener('click',MessageDiv2,true);
             p2.addEventListener('click',MessageP2,true);
-            function MessageDiv2(){alert('Evènement du div');};
-            function MessageP2(){alert('Evènement du paragraphe');};
+            function MessageDiv2(){alert('Evènement du div 2');};
+            function MessageP2(){alert('Evènement du paragraphe 2');};
         </script>
     </body>
 </html>

@@ -1,15 +1,39 @@
 <HTML>
-	<HEAD>
+	<head>
 	<TITLE>New Document</TITLE>
+		
+	</head>
+	<body>
+		<form name="form1">
+		</form>
+
+		<label for="age">votre Age :</label>
+		<input type="text" id="age" name="age">
+
+		<label for="ville">votre Ville :</label>
+		<input type="text" id="ville" name="ville">
+
+		<button id="monBouton">
+			cliquer ici pour afficher la phrase
+		</button>
+
+		<textarea id='phrase' rows="3" cols="30">
+		</textarea>
+
 		<script language="Javascript">
-			var nom = prompt ("Votre nom?", "nom");
+			let nom = prompt ("Votre nom?", "nom");
+			let age = document.getElementById('age'); 
+			let ville = document.getElementById('ville');
+			let myButton = document.getElementById('monBouton');
+			let phrase = document.getElementById('phrase');
+
+        	myButton.addEventListener('click', AfficherTexte);
+
+			function AfficherTexte(){
+            	phrase.innerHTML = nom + " a " + age.innerText + " ans " + " et habite à " + ville.innerHTML;
+        	}
 
 		</script>
-	</HEAD>
-	<BODY>
-		<form name="form1">
-		<center>
-		</center>
-		</form>
-	</BODY>
+
+	</body>
 </HTML>

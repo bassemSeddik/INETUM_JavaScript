@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+    <div class="container">
+        <button class="btn" id="pageChange">Changer de page</button>
+    </div>
+
+    <script>
+        let path = window.location.pathname;
+        console.log(path.split('/'));
+
+
+        let myButton = document.getElementById('pageChange');
+        myButton.addEventListener('click', changerPage);
+        
+        function changerPage(){
+            window.location.replace("https://my-website.fr/");
+        }
+        
+
+    </script>
+</body>
+</html>
