@@ -8,10 +8,10 @@
 		</form>
 
 		<label for="age">votre Age :</label>
-		<input type="text" id="age" name="age">
+		<input type="text" id="age" name="age" value="">
 
 		<label for="ville">votre Ville :</label>
-		<input type="text" id="ville" name="ville">
+		<input type="text" id="ville" name="ville" value="">
 
 		<button id="monBouton">
 			cliquer ici pour afficher la phrase
@@ -25,12 +25,13 @@
 			let age = document.getElementById('age'); 
 			let ville = document.getElementById('ville');
 			let myButton = document.getElementById('monBouton');
-			let phrase = document.getElementById('phrase');
+			let phraseResulat = document.getElementById('phrase');
 
         	myButton.addEventListener('click', AfficherTexte);
 
 			function AfficherTexte(){
-            	phrase.innerHTML = nom + " a " + age.innerText + " ans " + " et habite à " + ville.innerHTML;
+            	phraseResulat.textContent = nom + " a " + age.value + " ans " + 
+				" et habite à " + ville.value;
         	}
 
 		</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<TITLE>New Document</TITLE>
+		<script language="Javascript">
+
+		//var logPresaved = "bassem";
+		//var passPresaved = "orsys";
+		
+		// En se basant sur les tableau
+		var accessData = new Array(); // Définition des données d'accès dans un tableau
+		accessData.push("bassem");
+		accessData.push("123");
+		//accessData.login = "autre";
+
+		// var codeAcces = {
+		// 	login: 'bassem', 
+		// 	pwd: "123"
+		// };
+		
+		var login;
+		var password;
+		var test = 1; // variable qui servira à stopper le traitement lorsqu'elle sera à 0.
+
+		login = prompt ("Login?","login"); //on demande le login
+			//while (login != logPresaved)  { //tant que le login n'est pas correct...
+			while ( login != accessData[0] ){
+					login = prompt ("Login?","login"); // ...on redemande le login
+				}
+
+			for (i = 1; i < 4; i++)  { // on configure les 3 essais
+				password = prompt ("Password?\n Essai " + i,"password"); //on demande le password
+				//if (password == passPresaved)  { //si le password est correct, on interrompt la boucle
+				if (password == accessData[1]) {
+					break;
+				}
+					// si c'est le 3ème essai, et que le password est incorrect
+				if ( (password != accessData[1]) && (i == 3) )  { 
+					test = 0; // on mais le test false
+					document.write ('3 essais errones. Accés refusé.'); // on écrit le refus d'accès
+				}
+			}
+
+			if (test ==1)  { // si le test est réussi
+				document.write ('<h1>Merci de votre visite </h1>'); 
+			}
+			
+		</script>
+	</HEAD>
+	
+	<BODY>
+
+	</BODY>
+</HTML>

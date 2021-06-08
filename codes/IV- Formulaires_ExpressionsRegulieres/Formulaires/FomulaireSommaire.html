@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulaire Sommaire </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+    <body>
+        <h1>Les formulaires HTML</h1>
+        <!--Nous ne créerons pas la page "traitement.php" dans ce cours.
+        Cette page doit normalement effectuer le traitement des données.
+        Le bouton "valider" ne fonctionnera donc pas ici.-->
+        <form id='form' metod="post">
+            <div class="form-control">
+                <label for='prenom'> Nom et Prenom </label>
+                <input type='text' name='prenom' id='prenom' maxlength='20' required><br>
+            </div>
+            
+            <div class="form-control">
+                <label for='mail'>Adresse e-mail </label>
+                <br>
+                <input type='email' name='mail' id='mail' maxlength='20' required><br>
+            </div>
+
+            <div class="form-control">
+                <label for='tel'>Numéro de téléphone :</label>
+                <br>
+                <input type='tel' name='tel' id='tel' required ><br>
+            </div>
+
+            <div class="form-control">
+                <br>
+                    Pays
+                <br>
+            </div>
+
+            <select name="Pays" id="pays">
+                <option value="Selectionnez"</option>
+                <option value="France">France</option>
+                <option value="Belgique">Belgique</option>
+                <option value="Italie">Italie</option>
+                <option value="Tunisie">Tunisie</option>
+            </select>
+            
+            <div class="form-control">
+                <br>
+                    Genre
+                <br>
+                <input type="radio" id="Homme" name="Genre" value="Homme">
+                <label for="Homme">Homme</label><br>
+                <input type="radio" id="Femme" name="Genre" value="Femme">
+                <label for="Femme">Femme</label><br>
+            </div>
+
+            <div class="form-control">
+                <br>
+                    Centres d'intéret
+                <br>
+                <input type="checkbox" id="Sport" name="Interet1" value="Sport">
+                <label for="Interet1"> Sport</label><br>
+                <input type="checkbox" id="Cinema" name="Interet2" value="Cinema">
+                <label for="Interet2"> Cinema </label><br>
+                <input type="checkbox" id="Musique" name="Interet3" value="Musique">
+                <label for="Interet3"> Musique </label><br>
+            </div>
+            <input type='submit' value='Valider'>
+        </form>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
+
+

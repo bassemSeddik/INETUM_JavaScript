@@ -7,7 +7,7 @@
     
     <body>
         <h1>Expressions régulières et JavaScript</h1>
-        <p>Engagez-vous qu'ils disaient, rEngagez-vous qu'ils disaient !</p>
+        <p>Engagez-vous qu'ils disaient, rEngagez-vous qu'ils disaient ! Je me reEngage encore !!</p>
         <p id="reg"></p>
         
         <script>
@@ -16,10 +16,10 @@
             var expr = document.querySelector('p');
             
             //Première regex, avec l'option i
-            var r1 = /engagez/i;
+            var r1 = /engage/i;
             
             //Deuxième regex, avec les options i et g
-            var r2 = /engagez/ig;
+            var r2 = /engage/ig;
             
             //On fait nos recherches avec match()
             var res1 = expr.textContent.match(r1);

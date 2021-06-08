@@ -23,8 +23,8 @@
             var r2 = /e(nd)?/g;
             var res2 = rec.match(r2);
             
-            //Notre paragraphe commence par "o" et finit par "e" ?
-            var r3 = /^oe$/i;
+            //Notre paragraphe commence par "a" et finit par "d" ?
+            var r3 = /a[a-zA-Z]*d/ig;
             var res3 = r3.test(rec);
             
             //Notre paragraphe contient-il "pp"

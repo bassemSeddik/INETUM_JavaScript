@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+	<TITLE>New Document</TITLE>
+		<script language="Javascript">
+		var nom = prompt ("Votre nom?", "nom");
+		function Affich() {
+			document.form1.result.value = nom + " a " + document.form1.age.value + " ans et habite à " + document.form1.ville.value + ".";
+			}
+		</script>
+	</HEAD>
+	<BODY>
+		<form name="form1">
+		<center>
+			<input type="text" name="age" value="age"><br/>
+			<input type="text" name="ville" value="ville"><br/>
+			<input type="button" name="clic" value="Résultat" onClick="Affich();"><br/>
+			<textarea name="result" rows=3 cols=20></textarea>
+		</center>
+		</form>
+	</BODY>
+</HTML>
