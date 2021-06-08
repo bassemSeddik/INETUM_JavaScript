@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body>
+
+    <p>Cliquer le bouton pour avoir vos coodonnees.</p>
+
+    <button onclick="GenererGeoposition()"> Tester cela</button>
+
+    <p><strong>Note:</strong> La propiete geolocation  est supportée par IE8 and ses versions suivantes seulement.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("demo");
+        
+        function GenererGeoposition() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation non possible car pas supportee par ce navigateur!";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
+</body>
+
+</html>

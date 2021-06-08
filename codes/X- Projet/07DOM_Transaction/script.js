@@ -55,16 +55,19 @@ function addTransaction(e) {
 function addTransactionToHistory(transaction) {
   // Get sign
   const sign = transaction.getAmount() < 0 ? "-" : "+";
-  const item = document.createElement("li");
-
-  // Add class based on value
+  /**
+   * TODO algorithm:
+   *  1-Create a new Element in the document
+   *  2-Add a CSS class based on the value (plus or minus)
+   *  3-Create a new span element that displays the transaction info
+   *  4-Append the document with a new child node
+   *  */ 
+  //const item = document.  TODO
   item.classList.add(transaction.getAmount() < 0 ? "minus" : "plus");
-
   item.innerHTML = `
-    ${transaction.getName()} <span>${sign}${Math.abs(transaction.getAmount())}</span> 
+     ${transaction.getName()} <span>${sign}${Math.abs(transaction.getAmount())}</span>
   `;
-
-  list.appendChild(item);
+  // list.    TODO
 }
 
 // Update the balance, income and expense

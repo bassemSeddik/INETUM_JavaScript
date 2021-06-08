@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<h2>The JSONP </h2>
+	<p id="demo"></p>
+
+	<script>
+		function myFunc(myObj) {
+			document.getElementById("demo").innerHTML = myObj.name + " est agé(e) de " + myObj.age + " et habite à: " + myObj.city;
+		}
+	</script>
+
+	<script src="demo_jsonp.php"></script>
+
+</body>
+
+</html>

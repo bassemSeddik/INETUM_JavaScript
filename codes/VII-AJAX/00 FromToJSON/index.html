@@ -19,7 +19,8 @@
         obj.table.push({ id: 1, square: 2 });
 
         // 3- Convert it from an object to a string with JSON.stringify
-        var json = JSON.stringify(obj);
+        var jsonString = JSON.stringify(obj);
+        console.log(jsonString);
 
         let formation = [
             {
@@ -35,9 +36,12 @@
                 "qualité": 9
             }
         ];
-        console.log(JSON.parse(formation)[0]);
-        console.log(JSON.parse(formation)[1]["nom"]);
-        console.log(JSON.parse(formation)[0]["nom"][0]);
+
+        jsonString = JSON.stringify(formation);
+        console.log(JSON.parse(jsonString));
+        console.log(JSON.parse(jsonString)[1]);
+        console.log(JSON.parse(jsonString)[1]["nom"]);
+        console.log(JSON.parse(jsonString)[0]["nom"][0]);
     </script>
 </body>
 
